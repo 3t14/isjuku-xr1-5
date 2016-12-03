@@ -41,7 +41,13 @@ namespace xr1_5
 					
 				case 2:
 					Console.WriteLine("階乗の算出：while文の動作確認");
-
+					int j = nValue;
+					answer = j;
+					while (j > 1)
+					{
+						j--;
+						answer *= j;
+					}
 					break;
 					
 				case 3:
