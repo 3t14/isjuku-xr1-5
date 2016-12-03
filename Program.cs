@@ -19,16 +19,31 @@ namespace xr1_5
 				return;
 			}
 
+			Console.WriteLine("nを入力してください。");
+			string nStr = Console.ReadLine();
+			int nValue;
+			if (!int.TryParse(nStr, out nValue))
+			{
+				Console.WriteLine("数値ではありません");
+				return;
+			}
+			int answer = 0;
+
 			switch (result)
 			{
 				case 1:
-					Console.WriteLine("for文の動作確認");
-
+					Console.WriteLine("総和の算出：for文の動作確認");
+					for (int i = 1; i <= nValue; i++)
+					{
+						answer += i;
+					}
 					break;
+					
 				case 2:
-					Console.WriteLine("while文の動作確認");
+					Console.WriteLine("階乗の算出：while文の動作確認");
 
 					break;
+					
 				case 3:
 					Console.WriteLine("foreach文の動作確認");
 					break;
@@ -38,6 +53,8 @@ namespace xr1_5
 					Console.WriteLine("その番号の処理はありません。");
 					break;
 			}
+			Console.WriteLine("結果は {0} です。", answer);
+
 		}
 	}
 }
