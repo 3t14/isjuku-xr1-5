@@ -51,7 +51,12 @@ namespace xr1_5
 					break;
 					
 				case 3:
-					Console.WriteLine("foreach文の動作確認");
+					Console.WriteLine("sigma(i * xi):foreach文の動作確認");
+					int[] values = { 1, 2, 3, 4, 5 };
+					foreach (int k in values)
+					{
+						answer += nValue * k;
+					}
 					break;
 					
 				default:
